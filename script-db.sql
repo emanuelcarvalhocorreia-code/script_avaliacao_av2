@@ -1,5 +1,4 @@
-1_script_betinhas.sql
-100%
+
 -- ==========================================
 -- 0. REMOÇÃO DE TABELAS EXISTENTES (CASO NECESSÁRIO)
 -- ==========================================
@@ -320,3 +319,13 @@ Exibindo 1_script_betinhas.sql…
 select nome,endereco
   from loja order by nome asc 
 limit 3 
+
+
+    SELECT 
+        roupa,preco,
+    FROM 
+        roupa
+    WHERE 
+        preco > 200.00
+    ORDER BY 
+        preco DESC ;
