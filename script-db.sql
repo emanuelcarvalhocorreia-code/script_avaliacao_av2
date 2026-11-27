@@ -316,16 +316,21 @@ SELECT * FROM pagamento;
 Exibindo 1_script_betinhas.sql…
 
 
-select nome,endereco
-  from loja 
-  order by nome asc 
-   limit 3 ;
+SELECT nome,endereco
+  FROM loja 
+  ORDER by nome asc 
+   LIMIT 3 ;
 
 
-    SELECT 
-         roupa,estilo,pedido
-    FROM 
-      
-    WHERE 
-        preco > 200.00
-   
+SELECT 
+    r.nome AS roupa_nome,
+    r.preco AS preco,
+    e.nome AS estilo_nome
+FROM 
+    roupa r
+INNER JOIN 
+    estilo e ON r.fk_estilo = e.id_estilo
+WHERE 
+    r.preco > 200.00
+ORDER BY 
+    r.preco DESC;
