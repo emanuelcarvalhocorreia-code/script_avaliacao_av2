@@ -317,15 +317,15 @@ Exibindo 1_script_betinhas.sql…
 
 
 select nome,endereco
-  from loja order by nome asc 
-limit 3 
+  from loja 
+  order by nome asc 
+   limit 3 ;
 
 
     SELECT 
-        roupa,preco,
+         roupa,estilo,pedido
     FROM 
-        roupa
+      
     WHERE 
         preco > 200.00
-    ORDER BY 
-        preco DESC ;
+   
